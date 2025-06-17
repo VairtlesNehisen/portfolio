@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-slate-900;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: black !important;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  @apply text-white font-medium;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+/* Adicione animações se desejar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Animação para as barras de progresso */
+@keyframes progressBar {
+  from { width: 0; }
+  to { width: var(--final-width); }
+}
+
+.progress-bar {
+  animation: progressBar 1.5s ease-out forwards;
+}
+
+/* Efeito para as tags de tecnologia */
+.tech-tag {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.2);
+}
+
+/* Efeito de gradiente nos títulos */
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animação suave para os cards */
+.project-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 15px rgba(99, 102, 241, 0.2);
+}
